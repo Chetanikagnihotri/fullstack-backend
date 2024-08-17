@@ -6,7 +6,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Correct usage of CORS
+app.use(cors({
+    origin: 'http://localhost:3000' // Allow requests from this origin
+}));
 app.use(bodyParser.json());
 
 // Route to handle POST request
