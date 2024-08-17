@@ -18,6 +18,6 @@ app.post('/api/submit', (req, res) => {
   res.json({ message: `Text '${text}' received successfully!` });
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:5000`);
-});
+// app.listen(port, () => {
+//   console.log(`Server running on http://localhost:5000`);
+// });
