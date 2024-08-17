@@ -1,11 +1,11 @@
-// index.js
-
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+    origin: '*', // For development, allows requests from any origin. Be cautious in production.
+}));
 app.use(express.json());
 
 app.post('/api/submit', (req, res) => {
