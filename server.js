@@ -1,14 +1,12 @@
+// server.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({
-    origin: 'http://localhost:3000' // Allow requests from this origin
-}));
+app.use(no-cors());
 app.use(bodyParser.json());
 
 // Route to handle POST request
@@ -20,6 +18,7 @@ app.post('/api/submit', (req, res) => {
   res.json({ message: `Text '${text}' received successfully!` });
 });
 
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on http://localhost:5000`);
 });
